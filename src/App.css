@@ -55,3 +55,7 @@ span{
   flex-direction: row;
   justify-content: space-between;
 }
+
+.icone{
+  color:orange;
+}
