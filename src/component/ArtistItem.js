@@ -13,7 +13,7 @@ class ArtistItem extends React.Component {
     render(){
         return(
             <>
-                <div onClick={()=>this.setState({isSelected : !this.state.isSelected})}>{this.props.artist.nom}</div>
+                <div onClick={()=>this.setState({isSelected : !this.state.isSelected})}>{this.props.albums === null ? <Loading />:<span>{this.props.albums.length}</span>}{this.props.artist.nom}</div>
                 {this.state.isSelected ? 
                 this.props.albums === null ? <Loading /> : <ArtistDetail albums={this.props.albums} />
                 : "" }
