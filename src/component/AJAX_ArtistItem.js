@@ -17,7 +17,7 @@ class AJAX_ArtistItem extends React.Component{
     }
 
     render(){
-        return this.state.albums === null ? <Loading /> : <ArtistItem artist={this.props.artist} albums={this.state.albums}/>
+        return this.state.albums === null ? null : <ArtistItem artist={this.props.artist} albums={this.state.albums}/>
     }
 }
 
