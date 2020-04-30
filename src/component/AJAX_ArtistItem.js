@@ -5,13 +5,13 @@ import Loading from './Loading';
 class AJAX_ArtistItem extends React.Component{
     constructor(props){
         super(props);
-        state : {
+        this.state = {
             albums : null
         }
     }
 
     componentDidMount(){
-        fetch("https://iut-info.univ-reims.fr/users/jonquet/albums/public/index.php/artistes/"+this.props.artists.id+"/albums")
+        fetch("https://iut-info.univ-reims.fr/users/jonquet/albums/public/index.php/artistes/"+this.props.artist.id+"/albums")
         .then((reponse) => reponse.json() )
         .then(json => this.setState({albums : json}))
     }

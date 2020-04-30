@@ -1,10 +1,11 @@
 import React from 'react';
 import ArtistList from './ArtistList';
+import Loading from './Loading';
 
 class AJAX_ArtistList extends React.Component {
     constructor(props){
         super(props);
-        state : {
+        this.state = {
             artists : null
         }
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import AJAX_ArtistItem from "./AJAX_ArtistsItem";
+import AJAX_ArtistItem from "./AJAX_ArtistItem";
 
 function ArtistList(props){
 
