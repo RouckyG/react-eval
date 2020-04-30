@@ -12,12 +12,18 @@ class ArtistItem extends React.Component {
 
     render(){
         return(
-            <>
-                <div onClick={()=>this.setState({isSelected : !this.state.isSelected})}>{this.props.albums === null ? <Loading />:<span>{this.props.albums.length}</span>}{this.props.artist.nom}</div>
+            <div className='ArtistItem'>
+                <div className='Artist' onClick={()=>this.setState({isSelected : !this.state.isSelected})}>
+                    <div>
+                        {this.props.albums === null ? <Loading />:<span>{this.props.albums.length}</span>}
+                          {this.props.artist.nom} 
+                    </div>
+                    <div className="open">{this.state.isSelected?"-":"+"}</div>
+                    </div>
                 {this.state.isSelected ? 
                 this.props.albums === null ? <Loading /> : <ArtistDetail albums={this.props.albums} />
                 : "" }
-            </>
+            </div>
         )
     }
 }
